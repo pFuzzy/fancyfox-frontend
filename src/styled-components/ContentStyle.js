@@ -41,3 +41,10 @@ export const Title = styled(Link)`
     color: red;
   }
 `;
+
+export const Rating = styled.div`
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  font-size: 28px;
+`;
