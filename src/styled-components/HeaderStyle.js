@@ -11,7 +11,7 @@ export const Header = styled.div`
   color: blue;
   width: 100vw;
   height: 6vh;
-  background-color: lightblue;
+  background-color: #82c0d9;
 `;
 
 export const Logo = styled.img`
@@ -25,14 +25,17 @@ export const Logo = styled.img`
 export const AddButton = styled(Link)`
   position: fixed;
   right: 0;
-  width: 7vw;
-  margin-top: 1.3vh;
+  width: 15vh;
+  margin-top: 1vh;
   margin-right: 1vw;
+  padding: 0.4vh;
   font-size: 2.5vh;
   height: 3vh;
   text-decoration: none;
-  color: blue;
-  &:hover {
+  color: #3f4e66;
+  background-color: #ffa500;
+  border-radius: 30px;
+  :hover {
     color: lightblue;
     background-color: blue;
   }

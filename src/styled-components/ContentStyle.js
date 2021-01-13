@@ -3,11 +3,11 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const Content = styled.div`
-  width: 100vw;
+  width: 100%;
   height: auto;
   position: absolute;
   top: 6vh;
-  background-color: grey;
+  background-color: #3f4e66;
 `;
 
 export const Post = styled.div`
@@ -16,9 +16,13 @@ export const Post = styled.div`
   height: 450px;
   margin: auto;
   margin-top: 20px;
-  background-color: white;
+  background-color: #82c0d9;
   padding: 20px;
   border-radius: 10px;
+  border: 2px #82c0d9 solid;
+  :hover {
+    border: 2px #ffa500 solid;
+  }
 `;
 
 export const Video = styled(ReactPlayer)`
@@ -37,7 +41,8 @@ export const Title = styled(Link)`
   text-decoration: none;
   color: black;
   font-size: 26px;
+  font-weight: bold;
   :hover {
-    color: red;
+    color: #ff9305 ;
   }
 `;
