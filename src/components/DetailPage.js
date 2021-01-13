@@ -37,6 +37,7 @@ const DetailPage = () => {
   if (isLoading) {
     return <></>;
   } else {
+    console.log(video.comments);
     return (
       <Content>
         <Post>
@@ -55,8 +56,6 @@ const DetailPage = () => {
             {video.comments.map((comment) => {
               return <Comment key={comment.id}>{comment}</Comment>;
             })}
-            <Comment> NiceVery good Very NiceVery good Very NiceVery good Very NiceVery good Very NiceVery good Very Nice</Comment>
-            <Comment>Very good Very NiceVery good Very NiceVery good Very NiceVery good Very NiceVery good Very NiceVery good Very NiceVery good Very NiceVery good Very NiceVery good Very NiceVery good Very NiceVery good Very NiceVery good Very NiceVery good Very NiceVery good Very NiceVery good Very NiceVery good Very Nice</Comment>
         </CommentContainer>
       </Content>
     );
