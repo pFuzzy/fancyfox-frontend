@@ -14,6 +14,7 @@ const MainPage = () => {
       .get('http://localhost:8762/media/all')
       .then((res) => setVideos(res.data));
   }, []);
+  
   return (
     <div>
       <Header>
@@ -24,7 +25,7 @@ const MainPage = () => {
         {videos.map((video) => {
           return (
             <Post>
-              <Title>{video.title}</Title>
+              <Title to={'/details/' + video.id} >{video.title}</Title>
               <Video url={video.url} />
             </Post>
           );
