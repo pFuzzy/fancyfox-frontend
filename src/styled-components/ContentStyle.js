@@ -53,3 +53,9 @@ export const Rating = styled.div`
   right: 40px;
   font-size: 28px;
 `;
+
+export const upvote = styled(Link)`
+`;
+
+export const downvote = styled(Link)`
+`;

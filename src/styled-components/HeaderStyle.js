@@ -11,6 +11,7 @@ export const Header = styled.div`
   color: blue;
   width: 100vw;
   height: 6vh;
+  border-bottom:2px #3f4e66 solid ;
   background-color: #82c0d9;
 `;
 
@@ -19,7 +20,8 @@ export const Logo = styled.img`
   left: 50%;
   transform: translate(-50%, 0);
   width: auto;
-  height: 6vh;
+  margin-top: 0.25vh;
+  height: 5.5vh;
 `;
 
 export const AddButton = styled(Link)`
