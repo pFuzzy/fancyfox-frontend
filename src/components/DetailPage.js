@@ -4,9 +4,13 @@ import axios from "axios";
 import {
   Title,
   CommentContainer,
-  Comment
+  Comment,
+  CommentForm,
+  CommentFormTextArea,
+  CommentFormButton,
+  CommentLabel
 } from "../styled-components/DetailPageStyle";
-import {Content, Post, Video, Rating} from "../styled-components/ContentStyle";
+import {Content, Post, Video, Rating, Upvote, Downvote} from "../styled-components/ContentStyle";
 
 const DetailPage = () => {
   const [video, setVideo] = useState({});
@@ -22,17 +26,33 @@ const DetailPage = () => {
     });
   }, [id]);
 
+
+  function addComment(event) {
+    event.preventDefault();
+    let comment = event.target[0].value;
+    console.log(comment);
+  }
+
+
   if (isLoading) {
     return <></>;
   } else {
+    console.log(video.comments);
     return (
       <Content>
         <Post>
           <Title>{video.title}</Title>
           <Video url={video.url} />
+          <Upvote/>
+          <Downvote/>
           <Rating>{video.rating}</Rating>
         </Post>
         <CommentContainer>
+          <CommentForm  onSubmit={addComment}>
+            <CommentLabel>Add New Comment</CommentLabel>
+            <CommentFormTextArea></CommentFormTextArea><br/>
+            <CommentFormButton type="submit">submit</CommentFormButton>
+          </CommentForm>
             {video.comments.map((comment) => {
               return <Comment key={comment.id}>{comment}</Comment>;
             })}

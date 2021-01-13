@@ -1,6 +1,8 @@
 import ReactPlayer from 'react-player';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import Vote from '../images/Vote.png';
+
 
 export const Content = styled.div`
   width: 100%;
@@ -48,8 +50,48 @@ export const Title = styled(Link)`
 `;
 
 export const Rating = styled.div`
+  width: 50px;
+  height: 25px;
   position: absolute;
-  top: 40px;
-  right: 40px;
-  font-size: 28px;
+  right: 5%;
+  top: 10%;
+  font-size: 18px;
+  text-align: center;
+`;
+
+export const Upvote = styled(Link)`
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  background-image: url(${Vote});
+  width: 50px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25px 25px;
+  filter: grayscale(100%);
+  transition: 200ms;
+  :hover{
+    filter: grayscale(0);
+    transition: 200ms;
+  }
+`;
+
+export const Downvote = styled(Link)`
+  position: absolute;
+  right: 5%;
+  top: 15%;
+  background-image: url(${Vote});
+  width: 50px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25px 25px;
+  transform: rotate(180deg);
+  filter: grayscale(100%) hue-rotate(250deg);
+  transition: 200ms;
+  :hover{
+    filter: grayscale(0) hue-rotate(250deg);
+    transition: 200ms;
+  }
 `;
