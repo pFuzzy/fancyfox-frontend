@@ -10,7 +10,7 @@ import {
   CommentFormButton,
   CommentLabel
 } from "../styled-components/DetailPageStyle";
-import {Content, Post, Video, Rating} from "../styled-components/ContentStyle";
+import {Content, Post, Video, Rating, Upvote, Downvote} from "../styled-components/ContentStyle";
 
 const DetailPage = () => {
   const [video, setVideo] = useState({});
@@ -42,6 +42,8 @@ const DetailPage = () => {
         <Post>
           <Title>{video.title}</Title>
           <Video url={video.url} />
+          <Upvote/>
+          <Downvote/>
           <Rating>{video.rating}</Rating>
         </Post>
         <CommentContainer>
