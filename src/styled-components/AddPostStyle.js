@@ -46,6 +46,7 @@ export const Button = styled(Link)`
   color: #3f4e66;
   background-color: #ffa500;
   border-radius: 30px;
+  font-weight: bold;
   :hover {
     color: lightblue;
     background-color: blue;
