@@ -18,7 +18,7 @@ const MainPage = () => {
       <Content>
         {videos.map((video) => {
           return (
-            <Post>
+            <Post key={video.id}>
               <Title to={'/details/' + video.id} >{video.title}</Title>
               <Video url={video.url} />
             </Post>

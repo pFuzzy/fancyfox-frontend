@@ -25,7 +25,7 @@ const AddPost = () => {
             <Title>Video URL:</Title>
             <Input type="text" onChange={(e) => seturl(e.target.value)} />
           </FlexBoxRow>
-          <Button onClick={() => sendVideo(title, url)} to="/">Add</Button>
+          <Button onClick={() => sendVideo(title, url)}>Add</Button>
         </FlexBoxColumn>
       </Post>
     </Content>
@@ -39,9 +39,9 @@ const sendVideo = (title, url) => {
     "url": url
   }
   
-  console.log(body);
-    // axios.
-    //   post("http://localhost:8762/media/add", body)
+  axios
+    .post("http://localhost:8762/media/add-post", body)
+    .then(res => window.location.href="/")
       
 }
 
