@@ -6,7 +6,7 @@ import Vote from '../images/Vote.png';
 
 export const Content = styled.div`
   width: 100%;
-  height: auto;
+  min-height: 94%;
   position: absolute;
   top: 6vh;
   background-color: #3f4e66;
