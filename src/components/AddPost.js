@@ -8,6 +8,8 @@ import {
 } from "../styled-components/AddPostStyle";
 import { Content, Post } from "../styled-components/ContentStyle";
 import axios from 'axios';
+import config from "../config.json";
+
 
 const AddPost = () => {
   const [url, seturl] = useState("");
@@ -40,7 +42,7 @@ const sendVideo = (title, url) => {
   }
   
   axios
-    .post("http://localhost:8762/media/add-post", body)
+    .post(config.API + "/media/add-post", body)
     .then(res => window.location.href="/")
       
 }

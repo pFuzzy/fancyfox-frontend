@@ -44,14 +44,18 @@ const DetailPage = () => {
 
   function upvote(event) {
     event.preventDefault();
-
+    axios.put(config.API + "/media/increase-rating", {videoId: id}).then((res) => {
+      let ratingField = document.querySelector("#rating");
+      if (res.data === "Upvote successful") {
+        ratingField.innerText = parseInt(ratingField.innerText) + 1;
+      }
+    })
   }
 
 
   if (isLoading) {
     return <></>;
   } else {
-    console.log(video.comments);
     return (
       <Content>
         <Post>
@@ -59,7 +63,7 @@ const DetailPage = () => {
           <Video url={video.url} />
           <Upvote onClick={upvote}/>
           <Downvote onClick={upvote}/>
-          <Rating>{video.rating}</Rating>
+          <Rating id="rating">{video.rating}</Rating>
         </Post>
         <CommentContainer>
           <CommentForm  onSubmit={addComment}>
