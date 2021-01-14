@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Content, Post, Video, Title } from '../styled-components/ContentStyle';
+import { Content, Post, Video, TitleLink } from '../styled-components/ContentStyle';
 
 
 const MainPage = () => {
@@ -18,8 +18,8 @@ const MainPage = () => {
       <Content>
         {videos.map((video) => {
           return (
-            <Post>
-              <Title to={'/details/' + video.id} >{video.title}</Title>
+            <Post key={video.id}>
+              <TitleLink to={'/details/' + video.id} >{video.title}</TitleLink>
               <Video url={video.url} />
             </Post>
           );

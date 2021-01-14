@@ -31,6 +31,8 @@ const DetailPage = () => {
     event.preventDefault();
     let comment = event.target[0].value;
     console.log(comment);
+
+    
   }
 
 

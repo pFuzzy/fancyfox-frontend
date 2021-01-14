@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 
 
-export const Title = styled.h1``;
+export const Title = styled.h1`
+  color: black;
+  font-size: 26px;
+  font-weight: bold;`;
 
 export const CommentContainer = styled.div`
   width: 100%;
