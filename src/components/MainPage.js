@@ -1,7 +1,9 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Content, Post, Video, Title } from '../styled-components/ContentStyle';
+import { Content, Post, Video, TitleLink } from '../styled-components/ContentStyle';
+import config from "../config.json";
+
 
 
 const MainPage = () => {
@@ -9,7 +11,7 @@ const MainPage = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:8762/media/all')
+      .get(config.API + "/media/all")
       .then((res) => setVideos(res.data));
   }, []);
   
@@ -19,7 +21,7 @@ const MainPage = () => {
         {videos.map((video) => {
           return (
             <Post key={video.id}>
-              <Title to={'/details/' + video.id} >{video.title}</Title>
+              <TitleLink to={'/details/' + video.id} >{video.title}</TitleLink>
               <Video url={video.url} />
             </Post>
           );

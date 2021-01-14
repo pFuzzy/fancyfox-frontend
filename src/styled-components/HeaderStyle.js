@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import FancyFox from '../images/FancyFox.png';
+
 
 export const Header = styled.div`
   z-index: 1;
@@ -15,11 +17,15 @@ export const Header = styled.div`
   background-color: #82c0d9;
 `;
 
-export const Logo = styled.img`
+export const Logo = styled(Link)`
+  background-image: url(${FancyFox});
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 5.5vh;
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
-  width: auto;
+  width: 22vh;
   margin-top: 0.25vh;
   height: 5.5vh;
 `;

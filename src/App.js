@@ -3,13 +3,12 @@ import AddPost from "./components/AddPost";
 import DetailPage from "./components/DetailPage";
 import MainPage from "./components/MainPage";
 import { AddButton, Header, Logo } from './styled-components/HeaderStyle';
-import FancyFox from './images/FancyFox.png';
 
 function App() {
   return (
     <Router>
       <Header>
-        <Logo src={FancyFox} alt="FancyFoxLogo" />
+        <Logo to="/"/>
         <AddButton to="/add">Add post</AddButton>
       </Header>
       <Route exact path="/">

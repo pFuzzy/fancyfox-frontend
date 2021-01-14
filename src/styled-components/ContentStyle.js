@@ -39,7 +39,7 @@ export const Video = styled(ReactPlayer)`
   }
 `;
 
-export const Title = styled(Link)`
+export const TitleLink = styled(Link)`
   text-decoration: none;
   color: black;
   font-size: 26px;
